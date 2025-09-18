@@ -63,13 +63,14 @@ Let's begin our foray into classification by looking at some very simple classif
 The already implemented one is AlwaysPredictOne, a classifier that (as its name suggests) always predicts the positive class. We're going to use the TennisData dataset from datasets.py as a running example. So let's start up python and see how well this classifier does on this data. You should begin by importing util, datasets, binary, dumbClassifiers, and runClassifier. Also, be sure you always have from numpy import * and from pylab import *.
 
  
-
+```bash
 >>> h = dumbClassifiers.AlwaysPredictOne({})
 >>> h
 AlwaysPredictOne
 >>> h.train(datasets.TennisData.X, datasets.TennisData.Y)
 >>> h.predictAll(datasets.TennisData.X)
 array([ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.])
+```
 Indeed, it looks like it's always predicting one!
 
 Now, let's compare these predictions to the truth. Here's a very clever way to compute accuracies (WU1: why is this computation equivalent to computing classification accuracy?):
