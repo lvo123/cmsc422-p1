@@ -7,7 +7,6 @@ In dumbClassifiers.py, we implement the world's simplest classifiers:
 
 from binary import *
 from numpy  import *
-from numpy import mean
 from collections import Counter
 
 import util
